@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+/* くるっと */
+.rotateRightZ{
+    animation-name:rotateRightZAnime;
+    animation-duration:1s;
+    animation-fill-mode:forwards;
+  }
+  
+  @keyframes rotateRightZAnime{
+    from{
+      transform: rotateZ(0);
+      }
+    to{
+      transform: rotateZ(360deg);
+      }
+  }
+
+/* 拡大 */
+.zoomIn{
+    animation-name:zoomInAnime;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+  }
+  
+  @keyframes zoomInAnime{
+    from {
+    transform: scale(0.6);
+    }
+  
+    to {
+        transform: scale(1);
+    }
+  }
+
+  /* fadeUp */
+  .fadeUp{
+    animation-name:fadeUpAnime;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+    opacity:0;
+    }
+    
+    @keyframes fadeUpAnime{
+      from {
+        opacity: 0;
+        transform: translateY(100px);
+      }
+    
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+     
+    .fadeUpTrigger{
+        opacity: 0;
+    }
+    

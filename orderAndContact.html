@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cakery</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="js/move.js"></script>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css' rel='stylesheet' type='text/css'>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js' type='text/javascript'></script>
+    <!-- bootstrap-datepicker -->
+    <link rel="stylesheet" type="text/css" href="../bootstrap-datepicker-1.6.4-dist/css/bootstrap-datepicker.min.css">
+    <script type="text/javascript" src="../bootstrap-datepicker-1.6.4-dist/js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="../bootstrap-datepicker-1.6.4-dist/locales/bootstrap-datepicker.ja.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/move.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">
+                    <img class="header-logo" src="images/logo/logo.png" alt="Bootstrap" width="80" height="50">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="menu.html">Menu</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="press.html">Press</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="orderAndContact.html">Order & Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <div class="order-top">
+            <img class="order-title-sb wrap animate__animated animate__tada" src="images/order/orderTopSb.png" alt="">           
+          </div>
+    </header>
+    <main>
+       <section class="order wrap" id="orderForm">
+        <img class="order-title fadeUpTrigger" src="images/order/order.png" alt="">
+        <div class="form fadeUpTrigger">
+            <div class="name-flex">
+                <div class="mb-4 name">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="Bob">
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback">Please input your first name</div>
+                </div>
+                <div class="mb-4 name">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Smith">
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback">Please input your last name</div>
+                </div>
+            </div>
+            <div class="email-phoneNumber-flex">
+                <div class="mb-4 email-order">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="text" class="form-control" id="email" placeholder="aaa@aaa.com">
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback">Please input email address with proper format like "aaa@aaa.com"</div>
+                </div>
+                <div class="mb-4 phoneNumber">
+                    <label for="phoneNumber" class="form-label">Phone Number</label>
+                    <input type="text" class="form-control" id="phoneNumber" placeholder="11122223333">
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback">Please input phone number with 10 numbers</div>
+                </div>
+            </div>
+            <div class="mb-4 dateAndTime">
+                <label for="dateTime" class="form-label">Date & Time for Pick Up</label>
+                <div class="dateTime-flex">
+                    <input type="text" class="form-control mb-3 date" id="date" placeholder="DD/MM/YYYY">
+                    <select name ="time" id ="dateTime" class="form-select form-control time">
+                        <option value="08:00AM">08:00 AM</option>
+                        <option value="08:30AM">08:30 AM</option>
+                        <option value="09:00AM">09:00 AM</option>
+                        <option value="09:30AM">09:30 AM</option>
+                        <option value="10:00AM">10:00 AM</option>
+                        <option value="10:30AM">10:30 AM</option>
+                        <option value="11:00AM">11:00 AM</option>
+                        <option value="11:30AM">11:30 AM</option>
+                        <option value="12:00PM">12:00 PM</option>
+                        <option value="12:30PM">12:30 PM</option>
+                        <option value="13:00PM">13:00 PM</option>
+                        <option value="13:30PM">13:30 PM</option>
+                        <option value="14:00PM">14:00 PM</option>
+                        <option value="14:30PM">14:30 PM</option>
+                        <option value="15:00PM">15:00 PM</option>
+                        <option value="15:30PM">15:30 PM</option>
+                        <option value="16:00PM">16:00 PM</option>
+                    </select>
+                </div>
+                <div class="valid-feedback"></div>
+                <div class="invalid-feedback">Please input phone numberwith proper format like "(000)0000-0000"</div>
+            </div>
+            <div class="taste-image-flex">
+                <div class="mb-4 taste">
+                    <label for="taste" class="form-label">Taste for custom cake</label>
+                    <select name ="taste" id ="taste" class="form-select form-control">
+                        <option value="" selected>Select Taste</option>
+                        <option value="vanilla">Vanilla</option>
+                        <option value="chocolate">Chocolate</option>
+                        <option value="strawbelly">Strawbelly</option>
+                        <option value="banana">Banana</option>
+                        <option value="greenTea">Green tea</option>
+                    </select>
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback">Please select taste</div>
+                </div>
+                <div class="mb-4 image">
+                    <label for="image" class="form-label">Image Upload</label>
+                    <input type="file" class="form-control" id="image" name="image">
+                </div>
+            </div>
+            <div class="mb-4 detail">
+                <label for="detail" class="form-label textarea">Detail of Cakes</label>
+                <textarea  class="form-control" id="detail" cols="30" rows="10"></textarea>
+            </div>
+            <div class="button">
+                <button id="btnSignup" class="submit-button">Submit</button>
+            </div>
+        </div>
+       </section>
+       <section class="contact wrap">
+        <img class="contact-title fadeUpTrigger" src="images/order/contact.png" alt="">
+        <div class="form fadeUpTrigger">
+            <div class="name-flex">
+                <div class="mb-4 name">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="Bob">
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback">Please input your first name</div>
+                </div>
+                <div class="mb-4 name">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Smith">
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback">Please input your last name</div>
+                </div>
+            </div>
+            <div class="mb-4 email">
+                <label for="email" class="form-label">Email</label>
+                <input type="text" class="form-control" id="email" placeholder="aaa@aaa.com">
+                <div class="valid-feedback"></div>
+                <div class="invalid-feedback">Please input email address with proper format like "aaa@aaa.com"</div>
+            </div>
+            <div class="mb-4 detail">
+                <label for="detail" class="form-label textarea">Message</label>
+                <textarea  class="form-control" id="detail" cols="30" rows="10"></textarea>
+            </div>
+            <div class="button">
+                <button id="btnSignup" class="submit-button">Submit</button>
+            </div>
+        </div>
+       </section>
+       <section class="ig ig-margin">
+        <div class="wrap">
+            <div class="ig-icon-hushtag fadeUpTrigger">
+                <p class="ig-hashtag">#TheCakery&nbsp;&nbsp;&nbsp;#cakeofcakery</p>
+                <a href="https://www.instagram.com/van.arts/">
+                    <img class="ig-icon" src="images/ig/igIcon.png" alt="">
+                </a>
+            </div>
+            <div class="container ig-images">
+                <div class="row">
+                    <div class="ig-col col-xl-3 col-md-6 col-xs-12">
+                        <img class="ig-image fadeUpTrigger" src="images/ig/igImg1.png" alt="">
+                    </div>
+                    <div class="ig-col col-xl-3 col-md-6 col-xs-12">
+                        <img class="ig-image fadeUpTrigger" src="images/ig/igImg2.png" alt="">
+                    </div>
+                    <div class="ig-col col-xl-3 col-md-6 col-xs-12">
+                        <img class="ig-image fadeUpTrigger" src="images/ig/igImg3.png" alt="">
+                    </div>
+                    <div class="ig-col col-xl-3 col-md-6 col-xs-12">
+                        <img class="ig-image fadeUpTrigger" src="images/ig/igImg4.png" alt="">
+                    </div>
+                    <div class="ig-col col-xl-3 col-md-6 col-xs-12">
+                        <img class="ig-image fadeUpTrigger" src="images/ig/igImg5.png" alt="">
+                    </div>
+                    <div class="ig-col col-xl-3 col-md-6 col-xs-12">
+                        <img class="ig-image fadeUpTrigger" src="images/ig/igImg6.png" alt="">
+                    </div>
+                    <div class="ig-col col-xl-3 col-md-6 col-xs-12">
+                        <img class="ig-image fadeUpTrigger" src="images/ig/igImg7.png" alt="">
+                    </div>
+                    <div class="ig-col col-xl-3 col-md-6 col-xs-12">
+                        <img class="ig-image fadeUpTrigger" src="images/ig/igImg8.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="order-buttom container-fluid">
+        <div class="wrap row">
+            <div class="order-button-sb col-xl-6 col-md-6 col-12 fadeUpTrigger">
+                <img class="order-sb" src="images/orderBottom/orderSb.png" alt="">
+                <a class="button-order-buttom" href="orderAndContact.html#orderForm">Order Now</a>
+            </div>
+            <img class="order-woman col-xl-6 col-md-6 col-12 animate__animated bounceInLeftTrigger" src="images/orderBottom/orderWoman.png" alt="">
+        </div>
+    </section>
+    <section class="visit-us container-fluid">
+        <div class="wrap row">
+            <div class="visit-info col-xl-6 col-md-6 col-12">
+                <img class="visit-title fadeUpTrigger" src="images/visitUs/visitUs.png" alt="">
+                <div class="location-hours">
+                    <div class="location fadeUpTrigger">
+                        <h4>Location</h4>
+                        <p>333 Terminal Ave #700, Vancouver, BC V6A 4C1</p>
+                    </div>
+                    <div class="hours fadeUpTrigger">
+                        <h4>Hours</h4>
+                        <p>Mon-Fri 8:00am - 4:00pm</p>
+                        <p>Sat, Sun 10:00am - 3:00pm</p>
+                    </div>
+                </div>
+            </div>
+            <div class="map col-xl-6 col-md-6 col-12 fadeUpTrigger">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2603.203462331017!2d-123.0980102841294!3d49.27254177933018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486717893865d35%3A0xa8d10bdb2ca1c083!2sVancouver%20Institute%20of%20Media%20Arts%20(VanArts)!5e0!3m2!1sen!2sca!4v1675912638166!5m2!1sen!2sca" width="300" height="250" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="wrap">
+        <div class="container-fluid">
+            <div class="row">
+                <a class="footer-logo col-xl-6 col-md-6 col-12 animate__animated rubberBandTrigger" href="index.html">
+                    <img src="images/logo/logo.png" alt="">
+                </a>
+                <ul class="phone-mail col-xl-6 col-md-6 col-12 fadeUpTrigger">
+                    <li>
+                        <img src="images/footer/phone.png" alt="">
+                        <a href="tel:(604)682-2787">(604)682-2787</a>
+                    </li>
+                    <li>
+                        <img src="images/footer/mail.png" alt="">
+                        <a href="mailto:dummy@gmail.com">dummy@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul class="footer-nav fadeUpTrigger">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="press.html">Press</a></li>
+            <li><a href="orderAndContact.html">Order & Contact</a></li>
+        </ul>
+        <ul class="sns fadeUpTrigger">
+            <li>
+                <a href="https://www.instagram.com/van.arts/">
+                    <img src="images/footer/ig.png" alt="#">
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/vanarts?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+                    <img src="images/footer/twitter.png" alt="#">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/vancouver.institute.of.media.arts/">
+                    <img src="images/footer/facebook.png" alt="#">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/footer/pinterest.png" alt="#"> 
+                </a>
+            </li>
+        </ul>
+        <p class="copy-right fadeUpTrigger">&copy; 2023 The Cakery All right reserved</p>
+    </div>
+  </footer>
+  <div class="topScroll js-to-top">
+    <a href="#top">
+        <img src="images/top.png" alt="" class="imgScroll">
+    </a>
+  </div>
+</body>
+<script>
+    $('#date').datepicker();
+</script>
+</html>
